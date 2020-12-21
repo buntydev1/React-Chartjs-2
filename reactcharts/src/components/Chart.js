@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Line,Pie, Radar} from 'react-chartjs-2';
+import {Line,Polar, Doughnut} from 'react-chartjs-2';
 
 class Chart extends Component {
     constructor(props){
@@ -32,7 +32,7 @@ class Chart extends Component {
             }
         }}
       />
-      <Pie
+      <Polar
         data={this.state.chartData}
         options={{
             title:{
@@ -46,7 +46,7 @@ class Chart extends Component {
             }
         }}
       />
-      <Radar
+      <Doughnut
         data={this.state.chartData}
         options={{
             title:{
