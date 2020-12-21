@@ -31,18 +31,25 @@ class Chart extends Component {
             }
         }
     }
+
+    static defaultProps={
+        displayTitle:true,
+        displayLegend:true,
+        legendPosition:'right'
+    }
   render() {
     return (
       <Bar
         data={this.state.chartData}
         options={{
             title:{
-                display:true,
-                text:'Largest cities in Massachusetts'
+                display:this.props.displayTitle,
+                text:'Largest cities in Massachusetts',
+                fontSize:25
             },
             legend:{
-                display:true,
-                position:'right'
+                display:this.props.displayLegend,
+                position:this.props.legendPosition
             }
         }}
       />
