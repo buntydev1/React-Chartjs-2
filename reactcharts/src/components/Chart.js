@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Bar} from 'react-chartjs-2';
 
 class Chart extends Component {
-    constructor(){
+    constructor(props){
         super(props);
         this.state = {
             chartData:{
@@ -17,6 +17,14 @@ class Chart extends Component {
 	                        106519,
 	                        105162,
 	                        95072
+                        ],
+                        backgroundColor:[
+                            'rgb(153, 102, 102)',
+                            'rgb(242, 13, 13)',
+                            'rgb(102, 0, 0)',
+                            'rgb(0, 255, 255)',
+                            'rgb(0, 255, 0)',
+                            'rgb(255, 128, 0)'
                         ]
                     }
                 ]
@@ -26,8 +34,17 @@ class Chart extends Component {
   render() {
     return (
       <Bar
-        data={data}
-        options={{ maintainAspectRatio: false }}
+        data={this.state.chartData}
+        options={{
+            title:{
+                display:true,
+                text:'Largest cities in Massachusetts'
+            },
+            legend:{
+                display:true,
+                position:'right'
+            }
+        }}
       />
     );
   }
