@@ -16,17 +16,17 @@ class App extends Component {
   getChartData(){
     this.setState({
       chartData:{
-        labels: ['Boston','Worcester','Springfield','Lowell','Cambridge','New Bedford'],
+        labels: ['New York','Los Angles','Chicago','Houston','Phoneix','San Franciso'],
         datasets:[
             {
                 label:'Population',
                 data:[
-                    617594,
-                  181045,
-                  153060,
-                  106519,
-                  105162,
-                  95072
+                  8405837,
+                  3884307,
+                  2718782,
+                  2195914,
+                  1513367,
+                  837,442
                 ],
                 backgroundColor:[
                     'rgb(153, 102, 102)',
@@ -42,7 +42,7 @@ class App extends Component {
     })
   }
   render() {
-    return <Chart chartData={this.state.chartData} location="Massachusetts" />;
+    return <Chart chartData={this.state.chartData} location="America" />;
   }
 }
 
