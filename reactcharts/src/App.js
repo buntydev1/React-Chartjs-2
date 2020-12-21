@@ -42,7 +42,7 @@ class App extends Component {
     })
   }
   render() {
-    return <Chart chartData={this.state.chartData} />;
+    return <Chart chartData={this.state.chartData} location="Massachusetts" />;
   }
 }
 
