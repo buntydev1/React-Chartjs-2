@@ -26,7 +26,7 @@ class App extends Component {
                   2718782,
                   2195914,
                   1513367,
-                  837,442
+                  837442
                 ],
                 backgroundColor:[
                     'rgb(153, 102, 102)',
@@ -35,7 +35,11 @@ class App extends Component {
                     'rgb(0, 255, 255)',
                     'rgb(0, 255, 0)',
                     'rgb(255, 128, 0)'
-                ]
+                ],
+                borderWidth:1,
+                borderColor:'#777',
+                hoverBorderColor:'#000',
+                hoverBorderWidth:3
             }
         ]
     }
